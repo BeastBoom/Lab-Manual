@@ -1,0 +1,61 @@
+body {
+    /* Setting a background image for the body */
+    background-image: url(https://imgs.search.brave.com/j0MQU767BZ3WqWk1Y-sROwf0SZMvTtqeexH8nJvoNOI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/Y2VsZWJyYXRlLWNh/cm5pdmFsLWJhY2tn/cm91bmQuanBnP3dp/ZHRoPTEwMDAmZm9y/bWF0PXBqcGcmZXhp/Zj0wJmlwdGM9MA);
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-size: cover; /* Scales the image to cover the entire body */
+}
+
+.middle {
+    margin: 10px 200px 0 200px; /* Sets margins around the element */
+    padding: 5px; /* Adds padding inside the element */
+    border-radius: 25px; /* Rounds the corners of the element */
+    box-shadow: 3px 3px 2px grey; /* Adds a shadow to the element */
+    background-color: cornsilk; /* Sets the background color */
+    color: black; /* Sets the text color */
+    text-align: center; /* Centers the text */
+    position: relative; /* Allows for absolute positioning of children */
+}
+
+video {
+    object-fit: cover; /* Ensures video covers the whole area */
+    border-radius: 10px; /* Rounds the corners of the video */
+    margin: 0 0 0 20px; /* Sets margins around the video */
+    box-shadow: 2px 2px 2px gray; /* Adds a shadow to the video */
+}
+
+span {
+    text-align: left; /* Aligns text to the left */
+    padding: 5px; /* Adds padding inside the element */
+}
+
+h1 {
+    font-family: "Playwrite GB S", cursive; /* Sets the font family */
+    font-optical-sizing: auto; /* Enables optical sizing */
+    font-weight: 400; /* Sets the font weight */
+    font-style: normal; /* Sets the font style */
+    color: #ff0f7b; /* Sets the text color */
+    text-shadow: 2px 2px 2px grey; /* Adds a shadow to the text */
+}
+
+p {
+    font-family: "Play", sans-serif; /* Sets the font family */
+    font-weight: 400; /* Sets the font weight */
+    font-style: normal; /* Sets the font style */
+}
+
+h2, h3, h4, h5, h6 {
+    color: lime; /* Sets the text color */
+    font-family: "Play", sans-serif; /* Sets the font family */
+    font-weight: 700; /* Sets the font weight */
+    font-style: normal; /* Sets the font style */
+}
+
+a {
+    font-size: 20px; /* Sets the font size */
+    transition: all 0.3s ease-in-out; /* Adds a smooth transition effect */
+}
+
+a:hover {
+    color: goldenrod; /* Changes the text color on hover */
+    transform: scale(1.1); /* Slightly enlarges the text on hover */
+}

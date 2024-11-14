@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styled Table with CSS</title>
+    <style>
+        body {
+            /* Setting a background image for the body */
+            background-image: url(https://imgs.search.brave.com/j0MQU767BZ3WqWk1Y-sROwf0SZMvTtqeexH8nJvoNOI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/Y2VsZWJyYXRlLWNh/cm5pdmFsLWJhY2tn/cm91bmQuanBnP3dp/ZHRoPTEwMDAmZm9y/bWF0PXBqcGcmZXhp/Zj0wJmlwdGM9MA);
+            background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+            background-size: cover; /* Scales the image to cover the entire body */
+        }
+        .all {
+            margin: 60px 100px 0 100px; /* Sets margins around the element */
+        }
+        table {
+            width: 60%; /* Sets the table width */
+            margin: 20px auto; /* Centers the table horizontally */
+            border-collapse: collapse; /* Collapses the table borders */
+            margin-top: 70px; /* Adds top margin */
+        }
+        th, td {
+            border: 2px solid #4CAF50; /* Sets border for table cells */
+            padding: 10px; /* Adds padding inside table cells */
+            text-align: center; /* Centers the text inside table cells */
+        }
+        th {
+            background-color: #a7a6a6; /* Sets background color for table headers */
+        }
+        tr {
+            background-color: #f9f9f9; /* Sets background color for table rows */
+        }
+        table, th, td {
+            outline: 1px solid black; /* Adds an outline to the table, headers, and cells */
+        }
+        p {
+            margin: 0 60px; /* Sets margins for the paragraph */
+        }
+        h1 {
+            font-size: 50px; /* Sets font size for the heading */
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <center><h1><u>TABLE</u></h1></center> <!-- Centered heading with underline -->
+        <table>
+            <tr>
+                <th>Item</th> <!-- Table header for Item -->
+                <th>Quantity</th> <!-- Table header for Quantity -->
+                <th>Price</th> <!-- Table header for Price -->
+            </tr>
+            <tr>
+                <td>Apple</td> <!-- Table data for Apple item -->
+                <td>10</td> <!-- Quantity of Apple -->
+                <td>$1.00</td> <!-- Price of Apple -->
+            </tr>
+            <tr>
+                <td>Banana</td> <!-- Table data for Banana item -->
+                <td>8</td> <!-- Quantity of Banana -->
+                <td>$0.50</td> <!-- Price of Banana -->
+            </tr>
+            <tr>
+                <td>Orange</td> <!-- Table data for Orange item -->
+                <td>15</td> <!-- Quantity of Orange -->
+                <td>$1.20</td> <!-- Price of Orange -->
+            </tr>
+            <tr>
+                <td>Papaya</td> <!-- Table data for Papaya item -->
+                <td>12</td> <!-- Quantity of Papaya -->
+                <td>$1.40</td> <!-- Price of Papaya -->
+            </tr>
+            <tr>
+                <td>Watermelon</td> <!-- Table data for Watermelon item -->
+                <td>5</td> <!-- Quantity of Watermelon -->
+                <td>$0.70</td> <!-- Price of Watermelon -->
+            </tr>
+        </table>
+        <p>
+            <b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium error perspiciatis libero neque et.
+                Maiores nihil dolores consectetur quos laboriosam inventore fugit magnam nulla vitae alias itaque
+                repellendus incidunt modi maxime, labore nemo. Nihil ratione labore dolorem nesciunt vitae magni beatae
+                commodi praesentium numquam, culpa cumque error voluptatibus voluptate voluptatum qui soluta, recusandae
+                iusto sapiente cum! Laudantium qui molestiae mollitia culpa reiciendis dignissimos laboriosam nesciunt
+                doloribus, nobis non fugit, at corporis repellat modi. Aliquam autem excepturi tempora labore cum quod.
+                Totam ipsum praesentium a corporis officia sequi similique delectus quia. Praesentium id quidem,
+                molestias accusantium odio maxime quod recusandae eos!
+            </b>
+        </p> <!-- A paragraph with sample text -->
+    </div>
+</body>
+</html>

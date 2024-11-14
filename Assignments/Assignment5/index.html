@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="head">
+      <h1>Google Form</h1>
+      <hr />
+    </div>
+    <div class="container glass">
+      <br />
+      <form action="#" id="myForm">
+        <div class="text">
+          <p>Username :</p>
+        </div>
+
+        <div class="box-input">
+          <div class="border">
+            <input
+              id="username"
+              type="text"
+              name="text"
+              class="input"
+              placeholder="Username"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="text">
+          <p>Password :</p>
+        </div>
+
+        <div class="box-input">
+          <div class="border">
+            <input
+              type="password"
+              name="text"
+              class="input"
+              placeholder="Password"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="text">
+          <p>Email :</p>
+        </div>
+
+        <div class="box-input">
+          <div class="border">
+            <input
+              type="email"
+              name="text"
+              class="input"
+              placeholder="Email"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="text">
+          <p>Subscription Plan :</p>
+        </div>
+
+        <div class="box-input">
+          <div class="border">
+            <select class="select-box input" required>
+              <option class="main" value="">Choose a Option</option>
+              <option value="First">Premium Mini</option>
+              <option value="Second">Premium Individual</option>
+              <option value="Third">Premium Family</option>
+              <option value="Fourth">Premium Student</option>
+            </select>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-caret-down" style="color: #ffffff"></i>
+          </div>
+        </div>
+
+        <div class="text gender">
+          <p>Gender :</p>
+        </div>
+
+        <div id="navbody">
+          <ul class="ul">
+            <input
+              name="rad"
+              class="radio"
+              id="choose1"
+              type="radio"
+              required
+            />
+            <label for="choose1">
+              <li class="li li1">
+                <i class="fa-solid fa-mars" style="color: #000000"></i>
+                <span class="Male">Male</span>
+              </li>
+            </label>
+            <input
+              class="radio"
+              name="rad"
+              id="choose2"
+              type="radio"
+            />
+            <label for="choose2">
+              <li class="li li2">
+                <i class="fa-solid fa-venus" style="color: #000000"></i>
+                <span class="Female">Female</span>
+              </li>
+            </label>
+            <input class="radio" name="rad" id="choose3" type="radio" />
+            <label for="choose3">
+              <li class="li li3">
+                <i
+                  class="fa-solid fa-mars-and-venus"
+                  style="color: #000000"
+                ></i>
+                <span class="Others">Others</span>
+              </li>
+            </label>
+          </ul>
+        </div>
+
+        <div class="text gender">
+          <p>Additional Options :</p>
+        </div>
+
+        <div class="check">
+          <label class="checkbox">
+            <input checked="checked" type="checkbox" />
+            <div class="checkmark"></div>
+          </label>
+
+          <label class="checkbox check2">
+            <input checked="checked" type="checkbox" />
+            <div class="checkmark"></div>
+          </label>
+        </div>
+
+        <div class="checktext">
+          <p>Newsletter</p>
+          <p class="updates">Updates</p>
+        </div>
+        <br />
+
+        <div class="text">
+          <p>Comments/Feedback :</p>
+        </div>
+
+        <div class="tex" id="tex">
+          <textarea
+            id="username"
+            class="text_area"
+            placeholder="Enter Here"
+          ></textarea>
+        </div>
+        <button type="sumbit" id="googleform">
+          <p>Submit</p>
+        </button>
+
+        <button type="reset" class="button">
+          <p>Reset</p>
+        </button>
+      </form>
+      <script>
+        document.getElementById('googleform').addEventListener('click', function() {
+        const form = document.getElementById('myForm');
+        const formData = new FormData(form);
+        let allFilled = true;
+        let radioChecked = false;
+    
+        formData.forEach((value, key) => {
+            if (!value) {
+                allFilled = false;
+            }
+        });
+    
+        const radios = document.querySelectorAll('input[type="radio"][name="rad"]');
+        radios.forEach((radio) => {
+            if (radio.checked) {
+                radioChecked = true;
+            }
+        });
+    
+        if (allFilled && radioChecked) {
+            console.log("Form Data:");
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+    
+            alert('The response has been submitted');
+            // Clear form inputs
+            form.reset();
+        } else {
+            alert('Please fill all the fields');
+        }
+    });
+    
+      </script>
+    </div>
+  </body>
+</html>
